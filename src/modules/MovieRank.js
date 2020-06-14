@@ -97,7 +97,15 @@ export const movieRankAsync = (targetDt) => async (dispatch) => {
   // 예외처리: try 블록을 실행하는 도중 에러가 발생하면 그 즉시 처리를 중단하고 catch블록으로 제어가 이동한다.
   try {
     //Ajax 연동 결과로 전달되는 JSON 전문은 response.data로 접근할 수 있다.
+
     const apiUrl = "http://itpaper.co.kr/demo/react/movie_rank.php";
+
+    /*/
+    const apiUrl =
+      "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
+
+     /*/
+
     const response = await axios.get(apiUrl, {
       //연동 규격서에 명시된 요청 변수들 정의
       params: { key: "d6e4f46ea4f3910bb14f62340e2d9f19", targetDt: targetDt },

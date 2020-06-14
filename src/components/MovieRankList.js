@@ -14,6 +14,27 @@ const MovieRankList = ({ boxOfficeList }) => {
             <th>누적 매출액</th>
           </tr>
         </thead>
+        <tbody>
+          {boxOfficeList &&
+            boxOfficeList.map((item, index) => (
+              <tr>
+                <td className="text-center">{item.rank}</td>
+                <td className="text-center">{item.movieNm}</td>
+                <td className="text-center">
+                  {Number(item.audiCnt).toLocaleString()}명
+                </td>
+                <td className="text-center">
+                  {Number(item.salesAmt).toLocaleString()}원
+                </td>
+                <td className="text-center">
+                  {Number(item.audiAcc).toLocaleString()}명
+                </td>
+                <td className="text-center">
+                  {Number(item.salesAcc).toLocaleString()}원
+                </td>
+              </tr>
+            ))}
+        </tbody>
       </tabel>
     </div>
   );
