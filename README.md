@@ -30,6 +30,7 @@ yarn add moment-timezone //(영어권)
 yarn add chart.js
 yarn add react-chartjs-2
 yarn add react-loader-spinner
+yarn add react-helmet
 ```
 
 그래프 라이브러리 - D3.js, chart.js
@@ -179,4 +180,18 @@ http://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do
 > 2. 컴포넌트쪽에서 defaultProps를 사용하여 기본값을 지정
 >
 > 두가지 방법을 둘 다 쓰는 것을 권장!
+
+---
+
+### SEO 검색엔진 최적화
+
+#### 1) react-helmet
+
+#### 2) ssr
+
+react 페이지를 물리적인 서버에 올린다
+
+  next.js (react+node)
+
+---
 

@@ -19,6 +19,8 @@ import Loader from "react-loader-spinner";
 
 import style from "../assets/css/style.module.css";
 
+import Meta from "../components/Meta";
+
 const MovieRankPage = ({ match }) => {
   console.group("MovieRankPage");
   console.debug("targetDt >> " + match.params.targetDt);
@@ -44,6 +46,23 @@ const MovieRankPage = ({ match }) => {
 
   return (
     <div className={style.containerTop}>
+      {/* 검색 날짜가 존재한다면 새로운 검색 페이지라는 의미*/}
+      {match.params.targetDt && (
+        <Meta
+          title={["BoxOffice(", match.params.targetDt, ")"].join("")}
+          descrition={[
+            "React.js로 구현한",
+            match.params.targetDt,
+            "의 영화 순위 검색 결과 입니다.",
+          ].join("")}
+          keyword={[
+            "React.js",
+            "리액트",
+            "영화순위",
+            match.params.targetDt,
+          ].join("")}
+        />
+      )}
       <Top />
 
       {loading && (

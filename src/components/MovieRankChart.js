@@ -1,5 +1,5 @@
 import React from "react";
-import { Bar } from "react-chartjs-2";
+import { HorizontalBar } from "react-chartjs-2";
 import MovieRankList from "./MovieRankList";
 
 const MovieRankChart = ({ chartData, targetDt }) => {
@@ -29,7 +29,11 @@ const MovieRankChart = ({ chartData, targetDt }) => {
   };
 
   return (
-    <Bar data={data} height={320} options={{ maintainAspectRatio: false }} />
+    <HorizontalBar
+      data={data}
+      height={320}
+      options={{ maintainAspectRatio: false }}
+    />
   );
 };
 //2)컴포넌트쪽에서 defaultProps를 사용하여 기본값을 지정
